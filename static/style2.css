@@ -1,0 +1,400 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background: #eeeeee;
+}
+
+.callbtn{
+  margin-top: 20px;
+  background: green;
+  padding: 10px 10px;
+  margin-left: 175px;
+  border-radius: 3px;
+  color: white;
+}
+
+.topnav {
+  height: 9vh;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #0d1e3d;
+}
+
+.linked {
+  float: left;
+  color: #e0eceb;
+  text-align: center;
+  padding: 30px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.linked2 {
+  float: left;
+  color: #5c5c5c;
+  text-align: center;
+  padding: 13px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.linke{
+  padding: 0 0;
+  float: left;
+  text-align: center;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 80%;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.lg1{
+  color: #25b9ad;
+  font-size: 30px;
+  padding: 1px 0px;
+}
+
+.lg2{
+  color: rgba(255, 255, 255,0);
+  -webkit-text-stroke: 1px #25b9ad;
+  font-size: 30px;
+}
+
+.street{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 7px 0px;
+}
+
+.c70{
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.poiskovik{
+  width: 100%;
+  height: 40vh;
+  background: url(/static/banner.jpg);
+  background-position: center;
+  background-size: cover;
+  float: left;
+}
+
+.blackout{
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 40vh;
+  float: left;
+}
+
+select {
+  width: 30%;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  outline: none;
+  height: 5vh;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  padding-top: 1px;
+}
+
+select option {
+  padding: 10px;
+}
+
+.poisk{
+  margin-top: 50px;
+}
+
+#phone{
+  height: 5vh;
+  border: none;
+  padding: 0 25px;
+  width: 300px;
+  padding-top: 1px;
+  
+}
+
+#login::after{
+ border: none;
+}
+
+.btnpoisk{
+  height: 5vh;
+  padding: 14px 40px;
+  background: #25b9ad;
+  color: white;
+}
+
+.headerpoisk{
+  margin-top: 50px;
+  color: white;
+}
+
+.act{
+  margin: 20px 20px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background: #eeebe2;
+  width: 300px;
+  height: 47vh;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.kv{
+  width: 100%;
+  min-height: 288px;
+  
+}
+
+.actname{
+  color: #308f1d;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding: 5px 5px;
+}
+
+.actstar{
+  color: #9c9020;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding: 0px 5px;
+}
+
+.actprice{
+  color: #000000;
+  font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding: 0px 5px;
+  margin-bottom: 38px;
+}
+
+.actdate{
+  color: #868686;
+  font-size: 15px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding: 0px 5px;
+}
+
+.offers{
+  display: flex; /* Используем flexbox для центрирования и выравнивания содержимого */
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+  align-items: center; /* Выравниваем содержимое по вертикали */
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service {
+  width: 300px;
+  height: 400px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin: 15px;
+  text-align: center;
+  color:rgb(24, 24, 24);
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.service img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.service h2 {
+  margin-top: 20px;
+}
+
+.service p {
+  margin-top: 5px;
+}
+
+.order-btn {
+  display: block;
+  margin: 10px auto 0;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  width: 40%;
+}
+
+.order-btn:hover {
+  background-color: #0056b3;
+}
+
+
+.calccontainer {
+  height: 91vh;
+  background: url(/static/banner.jpg);
+  background-size: cover;
+}
+
+.dark{
+  background: rgba(0, 0, 0, 0.85);
+  width: 100%;
+  height: 91vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.calc{
+  margin-top: 10vh;
+  width: 900px;
+  height: 500px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.calc-container {
+display: flex;
+height: calc(100% - 40px); /* Высота экрана минус высота .navbar и отступы .calc */
+}
+.left-side, .right-side {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side{
+  width: 60%;
+}
+
+.right-side{
+  width: 40%;
+}
+
+.divider {
+  width: 2px;
+  height: 100%;
+  background-color: black;
+}
+.right-side {
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 30px;
+}
+.calculator {
+  width: 90%;
+  text-align: center;
+  margin: auto;
+}
+.quantity {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin: 30px 0px;
+}
+
+.minus, .plus{
+  border: 1px solid #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.minus, .plus:hover{
+  cursor: pointer;
+}
+
+.quantity input {
+  width: 50px;
+  text-align: center;
+  margin: 0 10px;
+}
+.total {
+  margin-top: 20px;
+}
+
+.schet{
+  margin: 0px 10px;
+}
+
+.calccontainer2 {
+  height: 100vh;
+  background: url(/static/banner.jpg);
+  background-size: cover;
+}
+
+.dark2{
+  background: rgba(0, 0, 0, 0.90);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.white-box {
+  width: 500px;
+  background-color: white;
+  flex-direction: column; /* Выравниваем элементы по вертикали */
+  justify-content: center;
+  align-items: center;
+  margin-top: 25vh;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.checkmark {
+  font-size: 3em; /* Установите желаемый размер иконки */
+  /* Другие стили */
+}

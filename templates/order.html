@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TechnoService36.com</title>
+    <link rel="icon" type="image/x-icon" href="/static/lgwb.png">
+    <link rel="stylesheet" href="/static/style2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Sofia+Sans+Condensed:wght@1&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topnav">
+        <div class="c70">
+        <a href="/" class="linked2">
+            <div class="street">
+                <div class="lg1">Techno</div>
+                <div class="lg2">Service</div>
+                <div class="lg1">36</div>
+                <div class="lg2">.com</div>
+            </div>
+        </a>
+        <a class="linked" href="/">Список мастеров</a>
+        <a class="linked" href="/">Прайс лист</a>  
+        <a class="linked" href="/">Отзывы</a>
+        </div>  
+    </div>
+    <div class="calccontainer">
+        <div class="dark"><form>
+        <div class="calc">
+            <div class="calc-container">
+                <div class="left-side">
+                    <div class="calculator">
+                        <h2>Калькулятор рассчета стоимости</h2>
+                        <div class="quantity" id="repair-laptop">
+                            <label for="service">Ремонт Ноутбука</label>
+                            <div class="schet">                               
+                                <span class="minus">-</span>
+                                <input type="number"  name="r1" required value="0">
+                                <span class="plus">+</span>
+                            
+                            </div>
+                            <label for="price">(<span class="price">1500</span> р за 1 ед.)</label>
+                        </div>
+                        <div class="quantity" id="repair-tablet">
+                            <label for="service">Ремонт Планшета</label>
+                            <div class="schet">
+                                <span class="minus">-</span>
+                                <input type="number" name="r2" required value="0">
+                                <span class="plus">+</span>
+                            </div>
+                            <label for="price">(<span class="price">2000</span> р за 1 ед.)</label>
+                        </div>
+                        <div class="quantity" id="repair-pc">
+                            <label for="service">Ремонт Компьютера</label>
+                            <div class="schet">
+                                <span class="minus">-</span>
+                                <input type="number" name="r3" required value="0">
+                                <span class="plus">+</span>
+                            </div>
+                            <label for="price">(<span class="price">800</span> р за 1 ед.)</label>
+                        </div>
+                        <div class="quantity" id="repair-tv">
+                            <label for="service">Ремонт Телевизора</label>
+                            <div class="schet">
+                                <span class="minus">-</span>
+                                <input type="number" name="r4" required value="0">
+                                <span class="plus">+</span>
+                            </div>
+                            <label for="price">(<span class="price">3000</span> р за 1 ед.)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="right-side"><center>
+                    <div class="total">
+                        <h2>Итоговая сумма</h2>
+                        <form>
+                        <div id="summary">
+                            <p>Ремонт Ноутбука: <span id="repair-laptop-total">0</span> ед.</p>
+                            <p>Ремонт Планшета: <span id="repair-tablet-total">0</span> ед.</p>
+                            <p>Ремонт Компьютера: <span id="repair-pc-total">0</span> ед.</p>
+                            <p>Ремонт Телевизора: <span id="repair-tv-total">0</span> ед.</p>
+                            
+                            <input type="text" placeholder="Ваш номер телефона" id="phone" name="phone" required>
+                            <input type="text" placeholder="Имя" id="phone" name="nameuser" required>
+                    
+                        <p>Сумма: <span id="total-amount">0</span><p></p><button type="submit" class="btnpoisk">Записаться</button></p>
+                        
+                    </div>
+                </div></center>
+            </div>
+        </div></form>
+        </div>
+    </div>
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+            const repairLaptop = document.getElementById('repair-laptop');
+            const repairTablet = document.getElementById('repair-tablet');
+            const repairPc = document.getElementById('repair-pc');
+            const repairTv = document.getElementById('repair-tv');
+
+            const phoneInput = document.getElementById('phone');
+            const nameInput = document.getElementById('name');
+            const totalAmountElement = document.getElementById('total-amount');
+
+            const repairItems = [repairLaptop, repairTablet, repairPc, repairTv];
+
+            repairItems.forEach(item => {
+                const plusButton = item.querySelector('.plus');
+                const minusButton = item.querySelector('.minus');
+                const quantityInput = item.querySelector('input');
+                const priceElement = item.querySelector('.price');
+
+                plusButton.addEventListener('click', function() {
+                    quantityInput.value = parseInt(quantityInput.value) + 1;
+                    updateTotalAmount();
+                });
+
+                minusButton.addEventListener('click', function() {
+                    if (parseInt(quantityInput.value) > 0) {
+                        quantityInput.value = parseInt(quantityInput.value) - 1;
+                        updateTotalAmount();
+                    }
+                });
+
+                quantityInput.addEventListener('input', function() {
+                    updateTotalAmount();
+                });
+
+                function updateTotalAmount() {
+                    const total = repairItems.reduce((acc, currentItem) => {
+                        const quantity = parseInt(currentItem.querySelector('input').value);
+                        const price = parseInt(currentItem.querySelector('.price').textContent);
+                        const itemName = currentItem.querySelector('label').textContent.split(':')[0].trim();
+                        document.getElementById(`${currentItem.id}-total`).textContent = quantity;
+                        return acc + (quantity * price);
+                    }, 0);
+                    totalAmountElement.textContent = total;
+                }
+            });
+        });
+</script>
+</body>
+</html>
